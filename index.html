@@ -1,0 +1,56 @@
+<!-- Добавьте этот код в раздел "Дополнительный HTML" в настройках страницы или сайта -->
+<style>
+  /* Устанавливаем светло-бирюзовый фон для всего сайта */
+  body {
+    background-color: #a8e6cf !important;
+    font-family: 'Montserrat', sans-serif !important;
+  }
+  
+  /* Стили для кнопки */
+  .change-name-btn {
+    background-color: #ff8b94 !important; /* розовый цвет */
+    color: white !important;
+    border: none !important;
+    padding: 12px 24px !important;
+    border-radius: 30px !important;
+    font-family: 'Montserrat', sans-serif !important;
+    font-weight: 600 !important;
+    cursor: pointer !important;
+    transition: all 0.3s ease !important;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1) !important;
+  }
+  
+  .change-name-btn:hover {
+    background-color: #ff6b7c !important; /* более темный розовый при наведении */
+    transform: translateY(-2px) !important;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15) !important;
+  }
+  
+  /* Стиль для текста с фамилией */
+  .surname-text {
+    font-family: 'Montserrat', sans-serif !important;
+    font-size: 24px !important;
+    margin: 20px 0 !important;
+    color: #333 !important;
+  }
+</style>
+
+<!-- Подключаем шрифт Montserrat -->
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+
+<!-- Добавьте этот HTML в нужное место на странице через блок "HTML-код" -->
+<div style="text-align: center; padding: 40px;">
+  <p class="surname-text">Фамилия: <span id="surname">Изотова</span></p>
+  <button class="change-name-btn" onclick="changeSurname()">Поменять фамилию</button>
+</div>
+
+<script>
+  function changeSurname() {
+    const surnameElement = document.getElementById('surname');
+    if (surnameElement.textContent === 'Изотова') {
+      surnameElement.textContent = 'Пахомова';
+    } else {
+      surnameElement.textContent = 'Изотова';
+    }
+  }
+</script>
